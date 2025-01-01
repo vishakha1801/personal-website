@@ -16,8 +16,8 @@ export default function MDXImage({ caption, alt, ...props }: MDXImageProps) {
   const href = props.src.toString();
 
   return (
-    <motion.a className="my-6 flex cursor-pointer flex-col justify-end gap-2" href={href} whileHover={{ scale: 0.975, opacity: 0.9 }}>
-      <div className="relative max-h-96 w-full overflow-hidden rounded-large border border-border">
+    <motion.a className="my-6 flex cursor-pointer flex-col justify-end gap-2" href={href} whileHover={{ scale: 0.975, opacity: 0.9 }} onClick={(e) => e.preventDefault()}>
+      <div className="relative max-h-64 max-w-64 overflow-hidden rounded-large border border-border">
         <Image
           unoptimized
           alt={alt}

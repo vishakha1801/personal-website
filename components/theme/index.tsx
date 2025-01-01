@@ -19,11 +19,6 @@ export const AppThemeSwitcher = () => {
   if (!mounted) return null;
 
   const buttons = [
-    {
-      label: "system",
-      icon: <Monitor width={13} />,
-      active: theme === "system",
-    },
     { label: "dark", icon: <Moon width={13} />, active: theme === "dark" },
     { label: "light", icon: <Sun width={13} />, active: theme === "light" },
   ];
@@ -35,7 +30,7 @@ export const AppThemeSwitcher = () => {
           type="button"
           key={label}
           onClick={() => setTheme(label)}
-          className={cn("ransition-all flex h-6 w-6 items-center justify-center rounded-[4px] hover:opacity-50", active ? "bg-gray-4 text-foreground" : "")}
+          className={cn("transition-all flex h-6 w-6 items-center justify-center rounded-[4px] hover:opacity-50", active ? "bg-gray-4 text-foreground" : "")}
         >
           {icon}
         </button>

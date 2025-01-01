@@ -66,7 +66,10 @@
   html {
     @apply text-default text-foreground bg-background;
 
-    h1,
+    h1{
+      @apply font-bold text-xl;
+    }
+
     h2,
     h3,
     h4,
